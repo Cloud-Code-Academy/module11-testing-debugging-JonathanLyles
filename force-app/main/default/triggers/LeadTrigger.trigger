@@ -16,6 +16,8 @@
  * - Debugging skills will be tested, so students should look out for discrepancies between the expected and actual behavior.
  */
 trigger LeadTrigger on Lead(before insert) {
+	String A = 'a';
+
 	switch on Trigger.operationType {
 		when BEFORE_INSERT {
 			LeadTriggerHandler.handleTitleNormalization(Trigger.new);
